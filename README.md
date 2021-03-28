@@ -1,5 +1,5 @@
 # WHUS2-CD
-WHUS2-CD is a validation cloud detection dataset for Sentinel-2A images.
+WHUS2-CD is a cloud validation detection dataset for Sentinel-2A images.
 WHUS2-CD contains 36 manually labeled cloud masks at 10m resolution and corresponding Sentinel-2A images evenly distributed over China mainland.
 WHUS2-CD can be downloaded on: https://pan.baidu.com/s/1ien7Oi-5TEm_3Nrd1lBIzg Extraction code: s2cd.
 
