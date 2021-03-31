@@ -7,5 +7,5 @@ Distributions of 36 images of the WHUS2-CD dataset. Land cover types credit: ESA
 ![WHUS2-CD.png](https://i.loli.net/2021/03/28/5jZLzaeKwONVPMg.png)  
 
 If you use this dataset for your research, please cite us accordingly:  
-Z. Wu, J. Li, Y. Wang, Z. Hu and M. Molinier, "Self-Attentive Generative Adversarial Network for Cloud Detection in High Resolution Remote Sensing Images," in IEEE Geoscience and Remote Sensing Letters, vol. 17, no. 10, pp. 1792-1796, Oct. 2020, doi: 10.1109/LGRS.2019.2955071.
+Wu, Z., Li, J*., Wang, Y., Hu, Z., Molinier, M., 2020. Self-attentive generative adversarial network for cloud detection in high resolution remote sensing images. IEEE Geosci. Remote Sens. Lett. 17(10), 1792-1796.
 
