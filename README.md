@@ -4,6 +4,8 @@ WHUS2-CD+ contains 36 manually labeled cloud masks at 10m resolution and corresp
 WHUS2-CD+ can be downloaded on: https://pan.baidu.com/s/1ien7Oi-5TEm_3Nrd1lBIzg Extraction code: s2cd.  
 Or on: https://doi.org/10.5281/zenodo.5511792.
 
+The environmental dependencies are listed in CDFM3SF.yml. Researchers can re-produce the training dataset by running cutimg.py.
+
 Distributions of 36 images of the WHUS2-CD+ dataset. Land cover types credit: ESA-CCI-LC (Defourny et al., 2017).    
 ![WHUS2-CD.png](https://i.loli.net/2021/03/28/5jZLzaeKwONVPMg.png)  
 
