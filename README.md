@@ -5,6 +5,7 @@ WHUS2-CD+ can be downloaded on: https://pan.baidu.com/s/1ien7Oi-5TEm_3Nrd1lBIzg 
 Or on: https://doi.org/10.5281/zenodo.5511792.
 
 The environmental dependencies are listed in CDFM3SF.yml. Researchers can re-produce the training dataset by running cutimg.py.
+The reported results in ref 1 are CDFM3SF-mask.rar, CDFM3SF-10-mask.rar and CDFM3SF-4-mask.rar, respectively. (0, 128 and 255 are for nodata, clear and cloud pixels, respectively)
 
 Distributions of 36 images of the WHUS2-CD+ dataset. Land cover types credit: ESA-CCI-LC (Defourny et al., 2017).    
 ![WHUS2-CD.png](https://i.loli.net/2021/03/28/5jZLzaeKwONVPMg.png)  
