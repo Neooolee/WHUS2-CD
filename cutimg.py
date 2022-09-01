@@ -28,7 +28,7 @@ def cut_data(filedir,window_size,stride):
         filepath=filedirs[i]
         print(filepath)
         savedirname=filepath.split('\\')[-1].split('.tif')[0][33:44]
-        savedirpath=filedir+'clips\\'+savedirname
+        savedirpath=filedir.replace("composite",'clips')+"/"+savedirname
         if not os.path.exists(savedirpath):
             os.makedirs(savedirpath)
         img = imgread(filepath)
