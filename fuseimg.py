@@ -53,3 +53,4 @@ def multi_dir(path):
         print(filedir)    
         fuse_DN(filedir)
 multi_dir(sourcepath)
+os.system("python cutimg.py")
