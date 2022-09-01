@@ -5,16 +5,8 @@ Created on Tue Oct 30 19:03:22 2018
 @author: Neoooli
 """
 
-import numpy as np
-import os
-import glob
-from gdaldiy import *
-
-
-import subprocess
 import zipfile
 import os
-# from fuseimg import *
 
 def unzip_file(zip_file_name,zip_output_dir, mode='rb'):
 
@@ -34,7 +26,7 @@ def unzip_file(zip_file_name,zip_output_dir, mode='rb'):
 
     return namelist[0]
        
-origin_dir = "F:/WHU/WHUS2-CD+/aa/"
+origin_dir = "F:/WHU/WHUS2-CD+/"
 pattern = ".zip"
 name='unziped'
 zippedoutput_dir =origin_dir+name
