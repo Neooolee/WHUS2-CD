@@ -7,7 +7,13 @@ Created on Tue Oct 30 19:03:22 2018
 
 import zipfile
 import os
-
+"""
+The source file should be organized as:
+sourcedir
+         /S2A_MSIL1C_20180429T032541_N0206_R018_T49SCV_20180429T062304.zip
+         /S2A_MSIL1C_20180722T030541_N0206_R075_T49RFP_20180722T060550.zip
+         ...
+"""
 def unzip_file(zip_file_name,zip_output_dir, mode='rb'):
 
     zip_file = open(zip_file_name, mode)
