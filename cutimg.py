@@ -18,17 +18,20 @@ sourcedir
         /60m/file1.tif...filen.tif   (3 bands 1/9/10)
 """
  
-sourcedir='F:/WHU/WHUS2-CD+/composite/'#source dir  
+sourcedir='F:/WHU/WHUS2-CD+/'#source dir  
+types=["train","test"]  
 names=['10m','20m','60m']
 window_sizes,strides=[384,192,64],[384,192,64]
 
-def cut_data(filedir,window_size,stride):
+def cut_data(filetype,name,window_size,stride):
+    filedir=sourcedir+filetype+"/"+name
+    print(filedir) 
     filedirs=glob.glob(os.path.join(filedir, '*'))
     for i in range(len(filedirs)):
         filepath=filedirs[i]
         print(filepath)
         savedirname=filepath.split('\\')[-1].split('.tif')[0][33:44]
-        savedirpath=filedir.replace("composite",'clips')+"/"+savedirname
+        savedirpath=filedir.replace(filetype,filetype+'DNclips')+"/"+savedirname
         if not os.path.exists(savedirpath):
             os.makedirs(savedirpath)
         img = imgread(filepath)
@@ -43,12 +46,11 @@ def cut_data(filedir,window_size,stride):
                 n=n+1
                 if np.all(img[high:high+window_size,width:width+window_size]>0):
                     imgwrite(savedirpath+"/"+str(n)+'.tif',img[high:high+window_size,width:width+window_size])
-def multi_dir(filedir,window_size,stride):
-    print(filedir)      
-    cut_data(filedir,window_size,stride)
-for i in range(len(names)):  
-    multi_dir(sourcedir+names[i],window_sizes[i],strides[i])
-
-
+def multi_dir(filetype,name,window_size,stride):     
+    cut_data(filetype,name,window_size,stride)
+for i in range(len(types)):
+    filetype=types[i]
+    for j in range(len(names)):  
+        multi_dir(filetype,names[j],window_sizes[j],strides[j])
 
 
