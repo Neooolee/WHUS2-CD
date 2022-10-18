@@ -37,7 +37,7 @@ sourcepath=sourcedir+name#the unziped file path
 savepath=sourcedir#savepath
 bands = [['10m','02','03','04','08'],['20m','05','06','07','8A','11','12'],['60m','01','09','10']]
 def fuse_DN(path1):
-    filename=path1.split('\\')[-1].split('.SAFE')[0]#[33:44]
+    filename=path1.split('/')[-1].split('\\')[-1].split('.SAFE')[0]#[33:44]
     if filename in testlist:
         savepath=sourcedir+"test"
     else:
