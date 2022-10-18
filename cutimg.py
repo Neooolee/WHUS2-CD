@@ -30,7 +30,7 @@ def cut_data(filetype,name,window_size,stride):
     for i in range(len(filedirs)):
         filepath=filedirs[i]
         print(filepath)
-        savedirname=filepath.split('\\')[-1].split('.tif')[0][33:44]
+        savedirname=filepath..split('/')[-1].split('\\')[-1].split('.tif')[0][33:44]
         savedirpath=filedir.replace(filetype,filetype+'DNclips')+"/"+savedirname
         if not os.path.exists(savedirpath):
             os.makedirs(savedirpath)
