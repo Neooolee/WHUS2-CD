@@ -5,7 +5,7 @@ Created on Fri Oct 25 20:57:37 2019
 @author: Neoooli
 """
 
-import gdal
+from osgeo import gdal
 import numpy as np
 
 list1 = ["byte","uint8","uint16","int16","uint32","int32","float32","float64","cint16","cint32","cfloat32","cfloat64"]
