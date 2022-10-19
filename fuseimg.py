@@ -37,12 +37,14 @@ sourcepath=sourcedir+name#the unziped file path
 savepath=sourcedir#savepath
 bands = [['10m','02','03','04','08'],['20m','05','06','07','8A','11','12'],['60m','01','09','10']]
 def fuse_DN(path1):
-    filename=path1.split('/')[-1].split('\\')[-1].split('.SAFE')[0]#[33:44]
+    filename=path1.split('\\')[-1].split('.SAFE')[0]#[33:44]
+    filename = os.path.basename(filename)
     if filename in testlist:
         savepath=sourcedir+"test"
     else:
         savepath=sourcedir+"train"
     print(filename)
+
     filedir1=glob.glob(os.path.join(path1, 'GRANULE'))[0]
     filedir2=glob.glob(os.path.join(filedir1, 'L*'))[0]
     filedir3=glob.glob(os.path.join(filedir2, 'IMG_DATA'))[0]
@@ -64,7 +66,7 @@ def fuse_DN(path1):
         imgwrite(savedir+"/"+filename+'.tif',fusedimg)
 
 def multi_dir(path):
-    filedirs=glob.glob(os.path.join(path, '*'))
+    filedirs=glob.glob(os.path.join(path, 'S2*'))
     for i in range(len(filedirs)):
         filedir=filedirs[i]
         print(filedir)    
